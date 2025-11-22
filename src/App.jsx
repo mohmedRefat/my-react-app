@@ -1,18 +1,22 @@
-/*
-* what is condition rendering in react?
- Condition rendering in React is a technique used 
-to render different components or elements based 
-on certain conditions or states. It allows developers
- to create dynamic user interfaces that can change based 
- on user interactions, data changes, or other factors.
-
-*/
-import UserGreeting from "./UserGreeting";
+import List from "./List";
 function App() {
+  const fruits = [
+    { id: 1, name: "apple", caleroies: 45 },
+    { id: 2, name: "banana", caleroies: 155 },
+    { id: 3, name: "coconut", caleroies: 33 },
+    { id: 4, name: "strawberies", caleroies: 121 },
+    { id: 5, name: "pinable", caleroies: 56 },
+    { id: 6, name: "mongo", caleroies: 98 },
+  ];
+
+  fruits.sort((a, b) => a.name.localeCompare(b.name));
+
   return (
-    <>
-      <UserGreeting  isLoggedIn={true} />
-    </>
+    <ul>
+      {fruits.map((fruit) => (
+        <List NameF={fruit.name} Cal={fruit.caleroies} key={fruit.id} />
+      ))}
+    </ul>
   );
 }
 
