@@ -1,22 +1,30 @@
-import List from "./List";
+/*
+* what is React hook?
+* React hooks are special functions that let you use state and other React features without writing a class.
+
+*what is useState?
+* useState is a React hook that allows you to add state to functional components. It returns an array with two elements: 
+the current state value and a function to update that state.
+
+*what is useEffect?
+* useEffect is a React hook that lets you perform side effects in functional components. 
+It can be used for data fetching, subscriptions, or manually changing the DOM in React components.
+
+*what is useContext?
+* useContext is a React hook that allows you to access the context value from a Context object. 
+It makes it easier to share values like themes or user information across components without passing props down manually at every level.
+
+
+
+
+*/
+import MyCompo from "./MyCompo";
 function App() {
-  const fruits = [
-    { id: 1, name: "apple", caleroies: 45 },
-    { id: 2, name: "banana", caleroies: 155 },
-    { id: 3, name: "coconut", caleroies: 33 },
-    { id: 4, name: "strawberies", caleroies: 121 },
-    { id: 5, name: "pinable", caleroies: 56 },
-    { id: 6, name: "mongo", caleroies: 98 },
-  ];
-
-  fruits.sort((a, b) => a.name.localeCompare(b.name));
-
   return (
-    <ul>
-      {fruits.map((fruit) => (
-        <List NameF={fruit.name} Cal={fruit.caleroies} key={fruit.id} />
-      ))}
-    </ul>
+    <>
+      <h1>My React App</h1>
+      <MyCompo />
+    </>
   );
 }
 
