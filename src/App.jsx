@@ -1,14 +1,8 @@
-/*
-*onChange = is event handler used primary especially with form Elements liks
-*select textarea input 
-*trigger function every time value exhanged 
-
-*/
-import MyCompo from "./MyCompo";
+import ColorPicker from "./ColorPicker";
 function App() {
   return (
     <>
-      <MyCompo />
+      <ColorPicker />
     </>
   );
 }
