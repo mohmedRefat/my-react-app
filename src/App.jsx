@@ -1,15 +1,10 @@
-/*
-*Updater function= A function is passed as argument to use state 
-  
+import MyCompo from "./MyCompo";
 
 
-*/
-
-import Counter from "./Counter";
 function App() {
   return (
     <>
-      <Counter />
+      <MyCompo />
     </>
   );
 }
