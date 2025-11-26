@@ -1,9 +1,9 @@
+import Todolist from "./Todolist";
 
-import MyCompo from "./MyCompo";
 function App() {
   return (
     <>
-      <MyCompo />
+      <Todolist/>
     </>
   );
 }
