@@ -1,28 +1,22 @@
 import { useEffect, useState } from "react";
 
 function MyCompo() {
-  const [count, setCount] = useState(0);
-  const [color, setColor] = useState("green");
-  function add() {
-    setCount((c) => c + 1);
+  const [width, setWidth] = useState(window.innerWidth);
+  const [height, setHeight] = useState(window.innerHeight);
+  function HandleWindow() {
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
   }
-  function Subtract() {
-    setCount((c) => c - 1);
-  }
-  function ChangeColor() {
-    setColor(color === "green" ? "red" : "green");
-  }
-
-  useEffect(() => {
-    document.title = `count is ${count} `;
-  }, [color]);
-
+  
+    useEffect(() => {
+      addEventListener("resize", HandleWindow);
+      console.log(`Add event listener`)
+    });
+  
   return (
     <div>
-      <p style={{ color: color }}>{count}</p>
-      <button onClick={add}>Add</button>
-      <button onClick={Subtract}>Subtract</button>
-      <button onClick={ChangeColor}>ChangeColor</button>
+      <p> width{width}px</p>
+      <p> height {height}px</p>
     </div>
   );
 }
