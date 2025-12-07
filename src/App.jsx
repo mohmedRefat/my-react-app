@@ -1,8 +1,10 @@
-import DigitalClock from "./DigitalClock";
+//* use context = is react hook that allow u to share values between different level of compo without passing probs
+
+import CompoA from "./CompoA";
 function App() {
   return (
     <>
-<DigitalClock/>
+      <CompoA />
     </>
   );
 }
